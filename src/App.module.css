@@ -1,0 +1,252 @@
+:root {
+   --border: rgba(0, 0, 0, 0.04) 2px solid;
+   --bs: -4px 4px 32px -3px rgba(0, 0, 0, 0.1);
+   --bsHover: -4px 4px 32px -3px rgba(0, 0, 0, 0.05);
+   --grey: rgba(0, 0, 0, 0.2);
+   --sectionGrey: rgba(0, 0, 0, 0.05);
+   --primary: #ffd151;
+   --error: rgb(255, 124, 124)
+}
+
+.nav {
+   padding: 1rem 2rem;
+   background: #262626;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   gap: 2rem;
+}
+
+.error {
+   color: var(--error)
+}
+
+.nav h2 {
+   font-weight: 400;
+   letter-spacing: 1px;
+}
+
+.nav span {
+   color: var(--primary);
+   font-weight: 800;
+}
+
+.main {
+   padding: 0 0 2rem 0;
+   width: 100%;
+   min-height: 50vh;
+}
+
+.container {
+   width: 100%;
+   max-width: 1180px;
+   margin: auto;
+}
+
+.container>h3 {
+   color: var(--grey);
+   padding: 1rem;
+}
+
+.container>h5 {
+   display: none;
+}
+
+.container>h4 {
+   /* text-align: center; */
+   font-size: 1.1rem;
+   padding: 2rem 0 1rem .5rem;
+   color: var(--grey);
+}
+
+.rows>h4 {
+   display: none;
+}
+
+.rows>h5 {
+   display: block;
+   color: var(--primary);
+   padding: 1rem 0 0 1rem;
+   font-size: 1.1rem;
+}
+
+.main .list {
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+   justify-content: center;
+
+   /* grid - delete width on li */
+
+   /* display: grid;
+   grid-template-columns: repeat(auto-fill, 250px);
+   justify-content: center;
+   gap: 1rem; */
+}
+
+.rows .list {
+   flex-direction: column;
+   margin: 1rem 0;
+}
+
+
+
+.main .list li {
+   position: relative;
+   padding: 1rem 1rem 1rem .3rem;
+   display: flex;
+   width: 250px;
+   max-width: 100%;
+   justify-content: space-around;
+   align-items: center;
+   box-shadow: var(--bs);
+   border: var(--border);
+   border-radius: 10px;
+   transition: all ease-in-out .2s;
+   gap: .5rem;
+   font-size: .9rem;
+   cursor: pointer;
+}
+
+.rows .list li {
+   padding: .3rem 1.5rem .3rem .7rem;
+   width: 300px;
+   justify-content: space-between;
+}
+
+.list li span {
+   max-width: 70%;
+   overflow: hidden;
+}
+
+.fileName {
+   cursor: text;
+}
+
+
+.folderCard .moreBtn {
+   width: 30px;
+   height: 30px;
+   /* color: var(--primary); */
+   color: var(--grey);
+   border-radius: 50%;
+   border: none;
+   box-shadow: var(--bs);
+   background-color: transparent;
+   font-size: 1.5rem;
+
+}
+
+.folderCard .options {
+   background-color: var(--sectionGrey);
+   position: absolute;
+   left: 0;
+   top: 50px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   padding: 1rem .5rem;
+   box-sizing: border-box;
+   z-index: 20;
+   box-shadow: var(--bs);
+   border: var(--border);
+}
+
+.folderCard .options li {
+   background-color: #fff;
+   padding: .3rem 2rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+.main .folderCard .options li svg {
+   font-size: 1rem;
+}
+
+.main .folderCard .options li span {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all ease-in-out .2s;
+}
+
+.main .folderCard .options li:hover span {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background-color: var(--primary);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.input {
+   padding: .3rem;
+   width: 70%;
+}
+
+
+.main .list li>svg {
+   color: var(--grey);
+   font-size: 2rem;
+}
+
+
+.main .list li:hover {
+   box-shadow: var(--bsHover);
+}
+
+.rollIn {
+   -webkit-animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+@-webkit-keyframes tilt-in-top-1 {
+   0% {
+      -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+      transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+      opacity: 0;
+   }
+
+   100% {
+      -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+      transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+   }
+}
+
+@keyframes tilt-in-top-1 {
+   0% {
+      -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+      transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+      opacity: 0;
+   }
+
+   100% {
+      -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+      transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+   }
+}
+
+@media screen and (max-width:600px) {
+   .main {
+      display: block;
+   }
+
+   .main .right {
+      width: 100%;
+   }
+
+   .rows .list {
+      align-items: center;
+   }
+
+}

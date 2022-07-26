@@ -1,0 +1,138 @@
+.leftNav {
+   padding: 1rem;
+   background-color: var(--sectionGrey);
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   max-width: 100vw;
+}
+
+.leftNav .bread {
+   display: flex;
+   gap: 1rem;
+}
+
+.leftNav .btns {
+   display: flex;
+   gap: 1rem;
+   position: relative;
+   ;
+}
+
+.leftNav .btns form {
+   position: absolute;
+   top: 30px;
+   right: 0;
+   padding: 1rem;
+   box-shadow: var(--bs);
+   width: 400px;
+   max-width: 80vw;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   background-color: #fff;
+   border-radius: 10px;
+   gap: 1rem;
+}
+
+.leftNav .btns form input {
+   width: 80%;
+   padding: .3rem .7rem;
+   border: var(--border);
+   font-size: 1.1rem;
+}
+
+.leftNav .bread button {
+   padding: .3rem .7rem;
+   border-radius: 10px;
+   width: fit-content;
+   background-color: #fff;
+   border: var(--border);
+   display: flex;
+   gap: .4rem;
+   font-size: .9rem;
+}
+
+.leftNav .bread button:hover svg {
+   transition: all ease-in-out .3s;
+   transform: rotate(90deg);
+}
+
+.leftNav button {
+   width: 40px;
+   height: 40px;
+   padding: .3rem .7rem;
+   border-radius: 40px;
+   border: none;
+   background-color: var(--primary);
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   transition: all ease-in-out .7s;
+   box-shadow: var(--bs);
+   overflow: hidden;
+   position: relative;
+}
+
+.leftNav .btn svg {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.leftNav .btn * {
+   transition: all ease .7s;
+}
+
+.leftNav button p {
+   margin: 0 0 0 30px;
+   white-space: nowrap;
+   font-size: 1.1rem;
+   font-weight: 600;
+}
+
+.leftNav .btn:hover {
+   transition: all ease-in-out .5s;
+   padding: .3rem .7rem;
+   box-shadow: var(--bsHover);
+   width: 200px;
+}
+
+.leftNav .btn:hover svg {
+   position: relative;
+   transform: translate(0);
+   left: auto;
+   top: auto;
+}
+
+.leftNav button:hover p {
+   margin: auto;
+}
+
+.leftNav button svg {
+   font-size: 1.5rem;
+}
+
+.leftNav input[type=file] {
+   display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+   .leftNav .bread {
+      display: none;
+   }
+
+   .leftNav .btns {
+      margin: 0 0 0 auto;
+   }
+
+   .leftNav .btn p {
+      display: none !important;
+   }
+
+   .leftNav .btn {
+      width: 40px !important;
+   }
+}
