@@ -7,7 +7,7 @@ import FolderLi from './components/FolderLi';
 import FileLi from './components/FileLi';
 import { AiOutlineCaretDown } from 'react-icons/ai';
 
-export const baseUrl = "http://localhost:3002/api/"
+export const baseUrl =  "https://aviad-drive.herokuapp.com/api/" //process.env.BASE_URL//
 const isFile = (str) => str.includes(".")
 const isFolder = (str) => !str.includes(".")
 
